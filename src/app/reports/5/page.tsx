@@ -40,16 +40,19 @@ export default async function Report5({searchParams}: {searchParams: {periodo: s
                                      ID
                                     </th>
                                     <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                     curso 
+                                     nombre del alumno
                                     </th>
                                     <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                     nombre del maestro
+                                     licenciatura
                                     </th>
                                     <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        asistencia promedio
+                                        periodo
                                     </th>
                                     <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        sesiones totales 
+                                        promedio final
+                                    </th>
+                                    <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        ranking
                                     </th>
                         
                                 </tr>
@@ -62,7 +65,7 @@ export default async function Report5({searchParams}: {searchParams: {periodo: s
                                         <td className="px-6 py-4 whitespace-nowrap">{row.licenciatura}</td>
                                         <td className="px-6 py-4 whitespace-nowrap font-bold">{row.periodo}</td>
                                          <td className="px-6 py-4 whitespace-nowrap font-bold">{row.promedio_final}</td>
-                                         <td className={`px-6 py-4 whitespace-nowrap ${row.ranking> 0 ? 'text-red-500 font-bold' : 'text-green-500'}`}>
+                                         <td className={`px-6 py-4 whitespace-nowrap ${row.ranking > 0 ? 'text-red-500 font-bold' : 'text-green-500'}`}>
                                             {row.ranking}
                                         </td>
                                     </tr>
