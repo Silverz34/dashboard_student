@@ -1,0 +1,3 @@
+--aun no se para que sirve , al rato investigamos 
+--ya investigue pero me da que aqui deb ir los index y el roles de usuario app segun chat
+--pero no lo pondre 
