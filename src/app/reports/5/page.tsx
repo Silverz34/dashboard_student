@@ -13,6 +13,7 @@ export default async function Report5({searchParams}: {searchParams: {periodo: s
         program: params.program, 
         page: currentPage 
     });
+    const kpi = Math.max(...data.map(row => Number(row.promedio_final)));
     return (
       <div className="p-8 font-sans text-white-800">
          <Flecha/>
@@ -22,8 +23,8 @@ export default async function Report5({searchParams}: {searchParams: {periodo: s
            </p>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 <div className="bg-white p-6 rounded-lg shadow border-l-4 ">
-                    <p className="text-gray-500 font-medium">jjkkkk</p>
-                    <p className="text-4xl font-bold text-gray-900 mt-2">{}</p>
+                    <p className="text-gray-500 font-medium">Promedio final mas alto</p>
+                    <p className="text-4xl font-bold text-gray-900 mt-2">{kpi}</p>
                 </div>
             </div>
                 <br></br>
