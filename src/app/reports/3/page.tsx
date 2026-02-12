@@ -4,7 +4,7 @@ import Buscador from "../../../../components/buscador";
 import Paginacion from "../../../../components/paginacion";
 
 export const dynamic = 'force-dynamic';
-export default async function Report3( {searchParams}: {searchParams: { query: string, page: string }}) {
+export default async function Report3({searchParams}: {searchParams: { query: string, page: string }}) {
     const resolvedParams = await searchParams;
     const query = resolvedParams.query;
     const currentPage = Number(resolvedParams.page) || 1;
@@ -22,7 +22,7 @@ export default async function Report3( {searchParams}: {searchParams: { query: s
                </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                <div className="bg-white p-6 rounded-lg shadow border-l-4 ">
-                 <p className="text-gray-500 font-medium">jjkkkk</p>
+                 <p className="text-gray-500 font-medium">Total de alumnos en riesgo</p>
                  <p className="text-4xl font-bold text-gray-900 mt-2">{kpiTotal}</p>
                 </div>
             </div>

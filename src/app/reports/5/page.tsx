@@ -1,7 +1,18 @@
 import { Flecha } from "../../../../components/flecha";
-import { rankStudent } from "../../../../lib/data/rank_student";
-export default async function Report5() {
-    const data = await rankStudent();
+import { getStudentRank } from "../../../../lib/data/rank";
+import { Filter } from "../../../../components/Filter";
+import Paginacion from "../../../../components/paginacion";
+
+export const dynamic = 'force-dynamic';
+export default async function Report5({searchParams}: {searchParams: {periodo: string, program: string, page: string }}) {
+    const params = await searchParams;
+    const currentPage = Number(params.page) || 1;
+
+    const { data, totalPages } = await getStudentRank({ 
+        periodo: params.periodo, 
+        program: params.program, 
+        page: currentPage 
+    });
     return (
       <div className="p-8 font-sans text-white-800">
          <Flecha/>
@@ -16,6 +27,7 @@ export default async function Report5() {
                 </div>
             </div>
                 <br></br>
+                <Filter/>
                 <div className="bg-white rounded-lg shadow overflow-hidden">
                     <div className="px-6 py-4 border-b border-gray-200 bg-white">
                      <h3 className="text-lg font-medium text-gray-900">Listado de Productos</h3>
@@ -57,6 +69,7 @@ export default async function Report5() {
                                ))}
                           </tbody>                    
                       </table>
+                        <Paginacion currentPage={currentPage} totalPages={totalPages} />
                   </div>
                </div>                  
       </div>
