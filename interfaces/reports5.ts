@@ -5,7 +5,7 @@ export const Report5Schema = z.object({
  nombre_alumno : z.string(),
  licenciatura : z.string(),
  periodo : z.string(),
- promedio : z.number().nonnegative().min(0).max(10),
+ promedio_final : z.number().nonnegative().min(0).max(10),
  ranking : z.number().positive()
 });
 
