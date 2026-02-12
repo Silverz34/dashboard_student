@@ -14,7 +14,8 @@ export default async function Report2({ searchParams }: { searchParams: { page?:
            <Flecha/>
            <h1 className="text-3xl font-bold mb-2">Carga de trabajo por profesor</h1>
            <p className="text-gray-600 mb-6">
-              jjsjs
+             Monitoreo de la carga académica asignada a cada profesor. Visualiza el número de grupos y el total de estudiantes atendidos por docente,
+             correlacionado con el desempeño promedio de sus alumnos. Ideal para asegurar una distribución equitativa de la carga laboral y evaluar el impacto docente.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 <div className="bg-white p-6 rounded-lg shadow border-l-4 ">

@@ -14,7 +14,9 @@ export default async function Report1({searchParams} : {searchParams : {periodo?
             <Flecha/>
             <h1 className="text-3xl font-bold mb-2">Rendimiento por curso</h1>
             <p className="text-gray-600 mb-6">
-                shjsjs
+                Análisis detallado del desempeño estudiantil por materia. Este reporte permite identificar asignaturas con altos
+                índices de reprobación o promedios generales bajos, facilitando la detección temprana de cursos que requieren 
+                intervención académica o revisión de contenidos.
             </p>
              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 <div className="bg-white p-6 rounded-lg shadow border-l-4 ">

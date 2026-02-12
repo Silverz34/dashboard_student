@@ -18,7 +18,9 @@ export default async function Report3({searchParams}: {searchParams: { query: st
             <Flecha/>
             <h1 className="text-3xl font-bold mb-2">Alumnos en riesgo</h1>
               <p className="text-gray-600 mb-6">
-                 jjsjs
+                 Sistema de alerta temprana para estudiantes en situación vulnerable. 
+                 Filtra alumnos con promedio crítico (menor 6.0) o asistencia insuficiente (menor 70%), 
+                 clasificando el tipo de riesgo (Académico, Asistencia o Crítico). Herramienta clave para activar protocolos de tutoría y retención.
                </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                <div className="bg-white p-6 rounded-lg shadow border-l-4 ">

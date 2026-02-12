@@ -8,7 +8,9 @@ export default async function Report4() {
          <Flecha/>
          <h1 className="text-3xl font-bold mb-2">Asistencia promedio del grupo</h1>
            <p className="text-gray-600 mb-6">
-             jjsjs
+             Control de asistencia promedio desglosado por grupo y profesor. Permite detectar patrones de ausentismo en 
+             asignaturas específicas y verificar el cumplimiento de las sesiones programadas. 
+             Un porcentaje bajo puede indicar problemas con el horario o la dinámica de la clase.
            </p>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 <div className="bg-white p-6 rounded-lg shadow border-l-4 ">

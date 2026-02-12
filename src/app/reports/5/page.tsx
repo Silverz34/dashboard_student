@@ -19,7 +19,8 @@ export default async function Report5({searchParams}: {searchParams: {periodo: s
          <Flecha/>
          <h1 className="text-3xl font-bold mb-2">Cuadro de honor</h1>
            <p className="text-gray-600 mb-6">
-             jjsjs
+              Clasificación de los estudiantes más destacados por periodo y programa académico. Utiliza un ranking basado en 
+              el promedio final para identificar a los candidatos a becas, menciones honoríficas y reconocimientos de excelencia.
            </p>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 <div className="bg-white p-6 rounded-lg shadow border-l-4 ">
