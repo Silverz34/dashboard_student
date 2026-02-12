@@ -2,6 +2,7 @@ import { Flecha } from "../../../../components/flecha";
 import { getAsistenciaPromedio } from "../../../../lib/data/asistencia_promedio";
 export default async function Report4() {
     const data = await getAsistenciaPromedio();
+    const kpi = data.reduce((sum, row) => sum + Number(row.sesiones_totales), 0);
     return (
        <div className="p-8 font-sans text-white-800">
          <Flecha/>
@@ -11,8 +12,8 @@ export default async function Report4() {
            </p>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 <div className="bg-white p-6 rounded-lg shadow border-l-4 ">
-                    <p className="text-gray-500 font-medium">jjkkkk</p>
-                    <p className="text-4xl font-bold text-gray-900 mt-2">{}</p>
+                    <p className="text-gray-500 font-medium">Sumatoria total de sesiones</p>
+                    <p className="text-4xl font-bold text-gray-900 mt-2">{kpi}</p>
                 </div>
             </div>
                 <br></br>
