@@ -11,7 +11,9 @@ export default function Home() {
     <div className="p-6 m-12"> 
       <section className="mb-8"> 
       <p className="text-gray-600">
-        aun le pondre la descripccion ...
+        El siguiente dashboard presenta una serie de reportes que ofrecen información valiosa sobre 
+        el rendimiento académico, la carga de trabajo de los profesores, los estudiantes en riesgo académico, la asistencia promedio por grupo y el cuadro de honor. 
+        Estos reportes están diseñados para ayudar a los administradores, profesores y estudiantes a tomar decisiones informadas y mejorar el desempeño académico en general.
       </p> 
       </section>
       <br></br>
