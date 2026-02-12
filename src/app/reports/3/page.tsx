@@ -1,9 +1,17 @@
 import { Flecha } from "../../../../components/flecha";
 import { getRiskStudents } from "../../../../lib/data/risk_student";
+import Buscador from "../../../../components/buscador";
+import Paginacion from "../../../../components/paginacion";
 
 export const dynamic = 'force-dynamic';
-export default async function Report3() {
-    const data = await getRiskStudents();
+export default async function Report3( {searchParams}: {searchParams: { query: string, page: string }}) {
+    const resolvedParams = await searchParams;
+    const query = resolvedParams.query;
+    const currentPage = Number(resolvedParams.page) || 1;
+    const { data, totalPages, kpiTotal } = await getRiskStudents({ 
+        query, 
+        page: currentPage 
+    });
 
     return (
         <div className="p-8 font-sans text-white-800">
@@ -15,10 +23,13 @@ export default async function Report3() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                <div className="bg-white p-6 rounded-lg shadow border-l-4 ">
                  <p className="text-gray-500 font-medium">jjkkkk</p>
-                 <p className="text-4xl font-bold text-gray-900 mt-2">{}</p>
+                 <p className="text-4xl font-bold text-gray-900 mt-2">{kpiTotal}</p>
                 </div>
             </div>
             <br></br>
+            <div className="mb-6">
+                <Buscador placeholder="Buscar por nombre o correo..." />
+            </div>
             <div className="bg-white rounded-lg shadow overflow-hidden">
                 <div className="px-6 py-4 border-b border-gray-200 bg-white">
                     <h3 className="text-lg font-medium text-gray-900">Listado de Productos</h3>
@@ -62,6 +73,7 @@ export default async function Report3() {
                            ))}
                       </tbody>                    
                  </table>
+                <Paginacion currentPage={currentPage} totalPages={totalPages} />
             </div>
         </div>                  
      </div>
