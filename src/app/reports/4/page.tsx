@@ -1,5 +1,7 @@
 import { Flecha } from "../../../../components/flecha";
 import { getAsistenciaPromedio } from "../../../../lib/data/asistencia_promedio";
+
+export const dynamic = 'force-dynamic';
 export default async function Report4() {
     const data = await getAsistenciaPromedio();
     const kpi = data.reduce((sum, row) => sum + Number(row.sesiones_totales), 0);

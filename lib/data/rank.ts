@@ -22,7 +22,7 @@ export async function getStudentRank(params: { periodo?: string, program?: strin
     const sqlData = `
         SELECT * FROM vw_rank_students
         WHERE ($1::text IS NULL OR periodo = $1)
-          AND ($2::text IS NULL OR licenciatura = $2)
+        AND ($2::text IS NULL OR licenciatura = $2)
         ORDER BY ranking ASC
         LIMIT $3 OFFSET $4
     `;
