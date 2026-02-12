@@ -12,7 +12,7 @@ export default async function Report2({ searchParams }: { searchParams: { page?:
     return (
        <div className="p-8 font-sans text-white-800">
            <Flecha/>
-           <h1 className="text-3xl font-bold mb-2">Estatus de articulos</h1>
+           <h1 className="text-3xl font-bold mb-2">Carga de trabajo por profesor</h1>
            <p className="text-gray-600 mb-6">
               jjsjs
             </p>

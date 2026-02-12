@@ -8,7 +8,7 @@ export default async function Report3() {
     return (
         <div className="p-8 font-sans text-white-800">
             <Flecha/>
-            <h1 className="text-3xl font-bold mb-2">Estatus de articulos</h1>
+            <h1 className="text-3xl font-bold mb-2">Alumnos en riesgo</h1>
               <p className="text-gray-600 mb-6">
                  jjsjs
                </p>
