@@ -63,6 +63,8 @@ El usuario **app_user** tiene degenado el acceso directo a las tablas base (stud
 
 * **GRANT SELECT**: Permite leer solo la información procesada necesaria para los reportes. 
 
+![alt text](image.png)
+
 ## Reportes y Vistas SQL 
 
 #### 1. Rendimiento por Curso (vw_course_performance)
