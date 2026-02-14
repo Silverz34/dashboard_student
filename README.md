@@ -114,3 +114,11 @@ Aplica un filtro final WHERE para mostrar solo aquellos alumnos que no cumplen c
 * promedio_final: Calificación calculada con precisión de 2 decimales.
 
 * **Logica SQL:** Utiliza Window Functions (RANK() OVER (PARTITION BY ... ORDER BY ...)) para generar la posición del estudiante dinámicamente, segmentado por programa académico y periodo, sin necesidad de subconsultas.
+
+
+
+####  Fuentes  
+* clientes de forma perezosa [Pool](https://node-postgres.com/apis/pool)
+* Para [Roles de usuario](https://medium.com/@maraclaudiaprezescalante/postgresql-usuarios-roles-y-c%C3%B3mo-no-arruinar-tu-modelo-de-permisos-5be8099f97c0)
+* Para [Indices](https://www.datacamp.com/es/tutorial/sql-server-index) de sql 
+* Para  conocer de [CTE](https://www.datacamp.com/es/tutorial/cte-sql)
